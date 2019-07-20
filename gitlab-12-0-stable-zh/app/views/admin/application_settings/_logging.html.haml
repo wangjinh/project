@@ -1,0 +1,39 @@
+= form_for @application_setting, url: admin_application_settings_path(anchor: 'js-logging-settings'), html: { class: 'fieldset-form' } do |f|
+  = form_errors(@application_setting)
+
+  %p
+    %strong
+      NOTE:
+    These settings will be removed from the UI in a GitLab 12.0 release and made available within gitlab.yml.
+    In addition, you will be able to define a Sentry Environment to differentiate between multiple deployments. For example, development, staging, and production.
+
+  %fieldset
+    .form-group
+      .form-check
+        = f.check_box :sentry_enabled, class: 'form-check-input'
+        = f.label :sentry_enabled, class: 'form-check-label' do
+          开启 Sentry
+        .form-text.text-muted
+          %p 这些设置需要重启才能生效。
+          Sentry 是一个错误报告和日志记录工具。GitLab 当前并未自带此工具，需要在下面的网址下载并安装：
+          %a{ href: 'https://getsentry.com', target: '_blank', rel: 'noopener noreferrer' } https://getsentry.com
+
+    .form-group
+      = f.label :sentry_dsn, 'Sentry DSN', class: 'label-bold'
+      = f.text_field :sentry_dsn, class: 'form-control'
+
+    .form-group
+      .form-check
+        = f.check_box :clientside_sentry_enabled, class: 'form-check-input'
+        = f.label :clientside_sentry_enabled, class: 'form-check-label' do
+          启用客户端的 Sentry
+        .form-text.text-muted
+          Sentry 也可以用于客户端的错误报告和记录。
+          %a{ href: 'https://sentry.io/for/javascript/', target: '_blank', rel: 'noopener noreferrer' } https://sentry.io/for/javascript/
+
+      = f.label :clientside_sentry_dsn, '客户端 Sentry DSN', class: 'col-form-label col-sm-2'
+    .form-group
+      = f.label :clientside_sentry_dsn, 'Clientside Sentry DSN', class: 'label-bold'
+      = f.text_field :clientside_sentry_dsn, class: 'form-control'
+
+  = f.submit '保存修改', class: "btn btn-success"

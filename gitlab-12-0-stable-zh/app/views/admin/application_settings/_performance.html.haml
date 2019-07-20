@@ -1,0 +1,17 @@
+= form_for @application_setting, url: admin_application_settings_path(anchor: 'js-performance-settings'), html: { class: 'fieldset-form' } do |f|
+  = form_errors(@application_setting)
+
+  %fieldset
+    .form-group
+      .form-check
+        = f.check_box :authorized_keys_enabled, class: 'form-check-input'
+        = f.label :authorized_keys_enabled, class: 'form-check-label' do
+          写入 "authorized_keys" 文件
+        .form-text.text-muted
+          默认情况下，我们将写入 "authorized_keys" 文件以支持使用 SSH 的 Git 而无需额外配置。
+          GitLab 可以优化为使用数据库来验证 SSH 密钥。
+          请仅在您配置了 OpenSSH 服务器使用 AuthorizedKeysCommand 的情况下取消该选项。
+          点击帮助图标以了解更多细节。
+          = link_to icon('question-circle'), help_page_path('administration/operations/fast_ssh_key_lookup')
+
+  = f.submit _('Save changes'), class: "btn btn-success"

@@ -1,0 +1,378 @@
+#modal-shortcuts.modal{ tabindex: -1 }
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        %h4.modal-title
+          键盘快捷键
+          %small
+            = link_to '(显示全部)', '#', class: 'js-more-help-button'
+        %button.close{ type: "button", "data-dismiss": "modal", "aria-label" => _('Close') }
+          %span{ "aria-hidden": true } &times;
+      .modal-body
+        .row
+          .col-lg-4
+            %table.shortcut-mappings
+              %tbody
+                %tr
+                  %th
+                  %th 全局快捷键
+                %tr
+                  %td.shortcut
+                    %kbd s
+                  %td 定位到搜索框
+                %tr
+                  %td.shortcut
+                    %kbd f
+                  %td 定位到过滤框
+                - if performance_bar_enabled?
+                  %tr
+                    %td.shortcut
+                      %kbd p b
+                    %td Show/hide the Performance Bar
+                %tr
+                  %td.shortcut
+                    %kbd ?
+                  %td 显示/隐藏本对话框
+                %tr
+                  %td.shortcut
+                    - if browser.platform.mac?
+                      %kbd &#8984; shift p
+                    - else
+                      %kbd ctrl shift p
+                  %td 切换 Markdown 预览
+                %tr
+                  %td.shortcut
+                    %kbd
+                      %i.fa.fa-arrow-up
+                  %td 编辑最新的评论（当焦点位于空白的文本区域时）
+                %tr
+                  %td.shortcut
+                    %kbd shift t
+                  %td
+                    转到待办事项
+                %tr
+                  %td.shortcut
+                    %kbd shift a
+                  %td
+                    转到活动 Feed
+                %tr
+                  %td.shortcut
+                    %kbd shift p
+                  %td
+                    转到项目
+                %tr
+                  %td.shortcut
+                    %kbd shift i
+                  %td
+                    转到问题
+                %tr
+                  %td.shortcut
+                    %kbd shift m
+                  %td
+                    转到合并请求
+                %tr
+                  %td.shortcut
+                    %kbd shift g
+                  %td
+                    转到群组
+                %tr
+                  %td.shortcut
+                    %kbd shift l
+                  %td
+                    转到里程碑
+                %tr
+                  %td.shortcut
+                    %kbd shift s
+                  %td
+                    转到代码碎片
+              %tbody
+                %tr
+                  %th
+                  %th 查找项目文件
+                %tr
+                  %td.shortcut
+                    %kbd
+                      %i.fa.fa-arrow-up
+                  %td 向上选择
+                %tr
+                  %td.shortcut
+                    %kbd
+                      %i.fa.fa-arrow-down
+                  %td 向下选择
+                %tr
+                  %td.shortcut
+                    %kbd enter
+                  %td 打开选择项
+                %tr
+                  %td.shortcut
+                    %kbd esc
+                  %td 后退
+          .col-lg-4
+            %table.shortcut-mappings
+              %tbody
+                %tr
+                  %th
+                  %th 项目
+                %tr
+                  %td.shortcut
+                    %kbd g
+                    %kbd p
+                  %td
+                    转到项目概览页
+                %tr
+                  %td.shortcut
+                    %kbd g
+                    %kbd v
+                  %td
+                    转到项目动态
+                %tr
+                  %td.shortcut
+                    %kbd g
+                    %kbd f
+                  %td
+                    转到文件
+                %tr
+                  %td.shortcut
+                    %kbd g
+                    %kbd c
+                  %td
+                    转到提交
+                %tr
+                  %td.shortcut
+                    %kbd g
+                    %kbd j
+                  %td
+                    转到作业
+                %tr
+                  %td.shortcut
+                    %kbd g
+                    %kbd n
+                  %td
+                    转到网络图表
+                %tr
+                  %td.shortcut
+                    %kbd g
+                    %kbd d
+                  %td
+                    转到版本库图表
+                %tr
+                  %td.shortcut
+                    %kbd g
+                    %kbd i
+                  %td
+                    转到问题
+                %tr
+                  %td.shortcut
+                    %kbd g
+                    %kbd b
+                  %td
+                    转到问题看板
+                %tr
+                  %td.shortcut
+                    %kbd g
+                    %kbd m
+                  %td
+                    转到合并请求
+                %tr
+                  %td.shortcut
+                    %kbd g
+                    %kbd e
+                  %td
+                    转到运行环境
+                %tr
+                  %td.shortcut
+                    %kbd g
+                    %kbd l
+                  %td
+                    Go to metrics
+                %tr
+                  %td.shortcut
+                    %kbd g
+                    %kbd k
+                  %td
+                    Go to kubernetes
+                %tr
+                  %td.shortcut
+                    %kbd g
+                    %kbd s
+                  %td
+                    转到代码片段
+                %tr
+                  %td.shortcut
+                    %kbd g
+                    %kbd w
+                  %td
+                    转到维基
+                %tr
+                  %td.shortcut
+                    %kbd t
+                  %td 转到文件查找
+                %tr
+                  %td.shortcut
+                    %kbd i
+                  %td 新建问题
+
+              %tbody
+                %tr
+                  %th
+                  %th 项目文件浏览
+                %tr
+                  %td.shortcut
+                    %kbd
+                      %i.fa.fa-arrow-up
+                  %td 向上选择
+                %tr
+                  %td.shortcut
+                    %kbd
+                      %i.fa.fa-arrow-down
+                  %td 向下选择
+                %tr
+                  %td.shortcut
+                    %kbd enter
+                  %td 打开选择项
+              %tbody
+                %tr
+                  %th
+                  %th 项目文件
+                %tr
+                  %td.shortcut
+                    %kbd y
+                  %td 转到文件固定链接
+              %tbody
+                %tr
+                  %th
+                  %th Web IDE
+                %tr
+                  %td.shortcut
+                    - if browser.platform.mac?
+                      %kbd &#8984; p
+                    - else
+                      %kbd ctrl p
+                  %td Go to file
+                %tr
+                  %td.shortcut
+                    - if browser.platform.mac?
+                      %kbd &#8984; enter
+                    - else
+                      %kbd ctrl enter
+                  %td Commit (when editing commit message)
+          .col-lg-4
+            %table.shortcut-mappings
+              %tbody.hidden-shortcut{ style: 'display:none' }
+                %tr
+                  %th
+                  %th 网络图表
+                %tr
+                  %td.shortcut
+                    %kbd
+                      %i.fa.fa-arrow-left
+                    \/
+                    %kbd h
+                  %td 向左滚动
+                %tr
+                  %td.shortcut
+                    %kbd
+                      %i.fa.fa-arrow-right
+                    \/
+                    %kbd l
+                  %td 向右滚动
+                %tr
+                  %td.shortcut
+                    %kbd
+                      %i.fa.fa-arrow-up
+                    \/
+                    %kbd k
+                  %td 向上滚动
+                %tr
+                  %td.shortcut
+                    %kbd
+                      %i.fa.fa-arrow-down
+                    \/
+                    %kbd j
+                  %td 向下滚动
+                %tr
+                  %td.shortcut
+                    %kbd
+                      shift
+                      %i.fa.fa-arrow-up
+                    \/
+                    %kbd
+                      shift k
+                  %td 滚动到顶部
+                %tr
+                  %td.shortcut
+                    %kbd
+                      shift
+                      %i.fa.fa-arrow-down
+                    \/
+                    %kbd
+                      shift j
+                  %td 滚动到底部
+              %tbody.hidden-shortcut{ style: 'display:none' }
+                %tr
+                  %th
+                  %th 问题
+                %tr
+                  %td.shortcut
+                    %kbd a
+                  %td 修改指派
+                %tr
+                  %td.shortcut
+                    %kbd m
+                  %td 修改里程碑
+                %tr
+                  %td.shortcut
+                    %kbd r
+                  %td 回复 (并引用选择的文本)
+                %tr
+                  %td.shortcut
+                    %kbd e
+                  %td 编辑问题
+                %tr
+                  %td.shortcut
+                    %kbd l
+                  %td 修改标记
+              %tbody.hidden-shortcut{ style: 'display:none' }
+                %tr
+                  %th
+                  %th 合并请求
+                %tr
+                  %td.shortcut
+                    %kbd a
+                  %td 修改指派
+                %tr
+                  %td.shortcut
+                    %kbd m
+                  %td 修改里程碑
+                %tr
+                  %td.shortcut
+                    %kbd r
+                  %td 回复 (并引用选择的文本)
+                %tr
+                  %td.shortcut
+                    %kbd e
+                  %td 编辑合并请求
+                %tr
+                  %td.shortcut
+                    %kbd l
+                  %td 更改标记
+                %tr
+                  %td.shortcut
+                    %kbd ]
+                    \/
+                    %kbd j
+                  %td 移动到下一个文件
+                %tr
+                  %td.shortcut
+                    %kbd [
+                    \/
+                    %kbd k
+                  %td 移动到上一个文件
+              %tbody.hidden-shortcut{ style: 'display:none' }
+                %tr
+                  %th
+                  %th 维基页面
+                %tr
+                  %td.shortcut
+                    %kbd e
+                  %td 编辑维基页面
