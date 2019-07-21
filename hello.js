@@ -1,3 +1,3 @@
-btn.click = function() {
-   console.log('git 远程测试！')
+btn.onclick = function() {
+   console.log('git 分支管理练习！');
 }

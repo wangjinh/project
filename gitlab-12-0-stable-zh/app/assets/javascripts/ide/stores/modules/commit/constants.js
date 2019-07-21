@@ -1,7 +1,0 @@
-const COMMIT_TO_CURRENT_BRANCH = '1';
-const COMMIT_TO_NEW_BRANCH = '2';
-
-export default {
-  COMMIT_TO_CURRENT_BRANCH,
-  COMMIT_TO_NEW_BRANCH,
-};

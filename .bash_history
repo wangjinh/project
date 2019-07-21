@@ -1,140 +1,3 @@
-vi /etc/masterha/app1.cnf 
-masterha_check_ssh --conf=/etc/masterha/app1.cnf
-ssh 192.168.170.22
-ssh 192.168.170.12
-ssh 192.168.170.11
-masterha_check_ssh --conf=/etc/masterha/app1.cnf
-ls .ssh/id_rsa
-ll .ssh/id_rsa
-ssh-keygen -t rsa
-ssh-copy-id -i .ssh/id_rsa.pub root@node4
-ssh-copy-id -i .ssh/id_rsa.pub root@node5
-ssh-copy-id -i .ssh/id_rsa.pub root@node6
-ssh node4
-masterha_check_ssh --conf=/etc/masterha/app1.cnf
-/usr/bin/masterha_check_ssh
-/usr/bin/masterha_check_ssh --conf=/etc/masterha/app1.cnf
-vi /etc/masterha/app1.cnf
-masterha_check_ssh --conf=/etc/masterha/app1.cnf
-vi /etc/masterha/app1.cnf
-masterha_check_ssh --conf=/etc/masterha/app1.cnf
-nohup masterha_manager –conf=/etc/master/aap1.cnf 
-nohup masterha_manager –conf=/etc/master/aap1.cnf   &> /data/masterha/manager.log 
-ssh-copy-id -i .ssh/id_rsa.pub .ssh/authorized_keys .ssh/id_rsa root@node6
-scp -p .ssh/id_rsa.pub .ssh/authorized_keys .ssh/id_rsa root@node6
-scp -p .ssh/id_rsa.pub .ssh/authorized_keys .ssh/id_rsa root@node6:/root/.ssh/
-scp -p .ssh/id_rsa.pub .ssh/authorized_keys .ssh/id_rsa root@node5:/root/.ssh/
-scp -p .ssh/id_rsa.pub .ssh/authorized_keys .ssh/id_rsa root@node4:/root/.ssh/
-masterha_check_ssh --conf=/etc/masterha/app1.cnf
-systemctl stop firewalld
-setenforce 0
-masterha_check_ssh --conf=/etc/masterha/app1.cnf
-cd .ssh/known_hosts 
-cd .ssh
-more known_hosts 
-rm known_hosts
-ssh 192.168.170.22
-ssh 192.168.170.12
-ssh node5
-scp -p .ssh/id_rsa.pub .ssh/authorized_keys .ssh/id_rsa root@node5:/root/.ssh/
-ssh node5
-ssh node4
-scp -p .ssh/id_rsa.pub .ssh/authorized_keys .ssh/id_rsa root@node4:/root/.ssh/
-ssh node4
-ssh node6
-scp -p .ssh/id_rsa.pub .ssh/authorized_keys .ssh/id_rsa root@node6:/root/.ssh/
-ssh node6
-scp -p .ssh/id_rsa.pub .ssh/authorized_keys .ssh/id_rsa root@node5:/root/.ssh/
-ssh node5
-scp -p .ssh/id_rsa.pub .ssh/authorized_keys .ssh/id_rsa root@node5:/root/.ssh/
-cd .ssh/
-ls
-less id_rsa
-less id_rsa.pub 
-less known_hosts 
-scp -p .ssh/id_rsa.pub .ssh/authorized_keys .ssh/id_rsa root@node5:/root/.ssh/
-ssh-keygen -t rsa 
-scp -p .ssh/id_rsa.pub  root@node5:/root/.ssh/
-rm ./*
-ssh-keygen -t rsa 
-ls
-scp -p .ssh/id_rsa.pub  root@node5:/root/.ssh/
-scp -p .ssh/id_rsa.pub  root@node5:/root/.ssh/id_rsa.pub
-scp -p /root/.ssh/id_rsa.pub root@node5:/root/.ssh/id_rsa.pub
-ssh node5
-ls
-scp -p /root/.ssh/id_rsa.pub ./id_rsa.pub known_hosts root@node5:/root/.ssh/
-ssh node5
-ssh node6
-scp -p /root/.ssh/id_rsa.pub ./id_rsa.pub known_hosts root@node6:/root/.ssh/
-ssh node6
-ls
-less known_hosts 
-ssh-copy-id -i .ssh/id_rsa.pub root@node4
-ssh-copy-id -i ./.ssh/id_rsa.pub root@node4
-ssh-copy-id -i /root/.ssh/id_rsa.pub root@node4
-ssh-copy-id -i /root/.ssh/id_rsa.pub root@node5
-ssh-copy-id -i /root/.ssh/id_rsa.pub root@node6
-ssh node4
-ssh node5
-exit
-masterha_check_ssh –conf=/etc/masterha/app1.cnf
-masterha_check_ssh --conf=/etc/masterha/app1.cnf
-cd .ssh/
-ls
-more known_hosts 
-ssh node5
-ssh-copy-id -i /root/.ssh/id_rsa.pub root@node6
-ssh node6
-ssh node6 "ifconfig"
-scp -p /root/.ssh/id_rsa.pub /root/./id_rsa.pub /root/.ssh/known_hosts root@node6:/root/.ssh/
-scp -p /root/.ssh/id_rsa.pub /root/.ssh/id_rsa.pub /root/.ssh/known_hosts root@node6:/root/.ssh/
-scp -p /root/.ssh/id_rsa.pub /root/.ssh/id_rsa.pub /root/.ssh/known_hosts root@node5:/root/.ssh/
-ssh node5
-ssh-copy-id -i /root/.ssh/id_rsa.pub root@node5
-scp -p /root/.ssh/id_rsa.pub /root/.ssh/id_rsa.pub /root/.ssh/known_hosts root@node4:/root/.ssh/
-ssh-copy-id -i /root/.ssh/id_rsa.pub root@node4
-ssh node4
-masterha_check_ssh --conf=/etc/masterha/app1.cnf
-cat /etc/hosts
-ifconfig
-masterha_check_ssh --conf=/etc/masterha/app1.cnf
-ping node
-ping node5
-ping node4
-ping node6
-masterha_check_ssh --conf=/etc/masterha/app1.cnf
-ssh node5
-masterha_check_ssh --conf=/etc/masterha/app1.cnf
-ssh-keygen -t rsa -P ''
-ssh-copy-id -i /root/.ssh/id_rsa.pub 
-cd
-for i in {4..6}; do scp -p .ssh/id_rsa .ssh/authorized_keys root@node$i:/root/.ssh/; done
-scp -p .ssh/id_rsa .ssh/authorized_keys root@node4:/root/.ssh/
-scp -p .ssh/id_rsa /root/.ssh/authorized_keys root@node4:/root/.ssh/
-scp ls
-ls
-cd .ssh/
-ls
-ssh-keygen -t rsa
-ls
-cat id_dsa.pub >> ~/.ssh/authorized_keys
-cat /root/.ssh/id_dsa.pub >> ~/.ssh/authorized_keys
-cat /root/.ssh/id_dsa.pub >> /root/.ssh/authorized_keys
-ls
-cat authorized_keys 
-cp ./id_rsa.pub authorized_keys 
-cat authorized_keys
-cat id_rsa.pub 
-scp -p .ssh/id_rsa .ssh/authorized_keys root@node5:/root/.ssh/
-cd
-scp -p .ssh/id_rsa .ssh/authorized_keys root@node5:/root/.ssh/
-scp -p .ssh/id_rsa .ssh/authorized_keys root@node6:/root/.ssh/
-ssh node6
-ssh node5
-masterha_check_ssh --conf=/etc/masterha/app1.cnf
-chmod -R 700 /root/.ssh/
-chmod 600 .ssh/authorized_keys 
 masterha_check_ssh --conf=/etc/masterha/app1.cnf
 ssh node4
 scp -p .ssh/id_rsa .ssh/authorized_keys root@node4:/root/.ssh/
@@ -998,3 +861,140 @@ chmod +x ops.sh
 touch 1.txt
 ./ops.sh 
 less 1.txt 
+ls
+git init
+ls
+cat /root/.ssh/id_rsa.pub
+git log --pretty=oneline
+cd myrpo/
+git log --pretty=oneline
+git reset --hard HEAD~1
+git reflog
+ git reset --hard e765bb5
+git reflog
+ls
+less Hello.js 
+vi Hello.js
+git add.
+git add .
+vi Hello.js
+git commit -m "change print"  
+git status
+git diff HEAD Hello.js 
+git status
+git checkout -- Hello.js 
+git status
+git diff HEAD Hello.js
+vi Hello.js 
+git add .
+git s[root@node7 myrpo]# git status
+# On branch master
+ git status
+git reset HEAD Hello.js 
+git checkout -- Hello.js 
+git status
+ls
+rm demo.js 
+ls
+git status
+git commit -a -m "Delete Demo.java File"
+git reset --hard  2df8801
+git diff HEAD demo
+git diff HEAD demo.js
+ssh -T git@192.168.170.227
+cat /root/.ssh/id_rsa.pub 
+cd
+ ssh-keygen -t rsa -C "wang_jinhuai@163.com"
+cat /root/.ssh/id_rsa.pub 
+ssh -T git@192.168.170.227
+pwd
+git remote add origin git@192.168.170.227:root/weixin.git
+git remote add origin git@192.168.170.227:root/weixin
+ git remote add origin git@192.168.170.227:root/myjob.git
+ls
+su - git
+cd weixin/
+ls
+git init
+git remote add origin git@192.168.170.227:root/weixin.git
+git remote add origin git@192.168.170.227:root/myjob.git
+git push -u origin master
+ls
+cd
+ls
+git remote set-url origin http://192.168.170.227/root/myjob.git
+git remote -v
+vi hello.js
+git commit -a -m "远程测试 git 
+git commit -a -m "远程测试 git"
+git add .
+git commit -a -m "远程测试 git"
+git push origin master
+ git remote -v
+ls
+rm mysql-all-backup-2019-05-04-14:54:31.sql 
+rm mysql-all-backup-2019-05-04-16:49:31.sql
+rm mysql-proxy-0.8.5-linux-el6-x86-64bit
+rm -rf mysql-proxy-0.8.5-linux-el6-x86-64bit
+rm mha*
+ls
+cat 12.0.3-zh.diff 
+rm 1*
+rm mysql-proxy-0.8.5-linux-el6-x86-64bit.tar.gz 
+rm Atlas-2.2.el6.x86_64.rpm 
+rm -rf   gitlab-12-0-stable-zh
+ls
+rm google.txt 
+ls
+mv gitlab-12-0-stable-zh.tar.gz /usr/local/
+ls
+git remote add origin git@192.168.170.227:root/myjob.git
+ls
+ git push -u origin master
+git pull --rebase origin master
+git push -u origin master
+git pull --rebase origin master 
+ls
+git remote add origin git@192.168.170.227:root/test.git
+git push -u origin master
+cat /root/.ssh/id_rsa.pub 
+mkdir /root/job
+ls
+c job/
+cd job/
+ls
+git init
+ls
+git add .
+ls
+ls -a
+cd .git/
+ls
+cd
+ls
+rm -rf job
+ls
+git clone git@192.168.170.227:root/test.git
+ls
+git remote add test git@192.168.170.227:root/test.git
+ls
+ls -a
+git remote
+git remote add test1 git@192.168.170.227:root/test.git
+git remote
+cd test/
+echo "This is Test txt - Accommate" > test.txt
+ls
+git add test.txt 
+git commit -m "add test"
+git push -u test master
+git remote -v
+git push -u origin master
+git remote add -h
+git remote -v
+git remote
+cat /root/.ssh/id_rsa.pub 
+cd
+ls
+ rm -rf test
+git clone git@192.168.170.227:root/test.git
